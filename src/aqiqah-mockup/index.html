@@ -413,7 +413,7 @@ footer.foot .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:
   <main id="cv-beranda" class="view">
     <section class="wrap hero">
       <div>
-        <p class="eyebrow">Layanan aqiqah Jabodetabek &amp; Bandung</p>
+        <p class="eyebrow">Layanan aqiqah Tangerang, Jabodetabek &amp; cabang</p>
         <h1 style="margin-top:12px">Aqiqah buah hati, <em>beres</em> tanpa repot.</h1>
         <p class="lede">Pilih kambing, tentukan tanggal, dan pantau prosesnya dari HP. Penyembelihan sesuai syariat oleh juru sembelih bersertifikat, lalu dimasak dan diantar hangat ke rumah Anda.</p>
         <div class="hero-cta">
@@ -491,7 +491,7 @@ footer.foot .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:
         <button class="btn btn-gold" data-go="pesan">Mulai pesan</button>
       </div>
     </section>
-    <footer class="foot"><div class="wrap"><span>© 2026 Habib Aqiqah · Jl. Raya Bogor KM 26, Jakarta Timur</span><span>WhatsApp admin: <span class="mono">0812-8800-1234</span></span></div></footer>
+    <footer class="foot"><div class="wrap"><span>© 2026 Habib Aqiqah · Kantor pusat Tangerang</span><span>WhatsApp admin: <span class="mono">0812-8800-1234</span></span></div></footer>
   </main>
 
   <!-- Pesan -->
@@ -554,7 +554,7 @@ footer.foot .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:
     <span class="grp">Bisnis</span>
     <button data-av="keuangan"><svg width="18" height="18"><use href="#i-wallet"/></svg>Keuangan</button>
     <button data-av="pelanggan"><svg width="18" height="18"><use href="#i-users"/></svg>Pelanggan</button>
-    <div class="me"><span class="avatar">HA</span><span><b>Admin Habib</b><br><span class="muted">Cabang Jakarta Timur</span></span></div>
+    <div class="me"><span class="avatar">HA</span><span><b>Admin Habib</b><br><span class="muted">Pusat Tangerang</span></span></div>
   </nav>
 
   <div class="main">
@@ -600,7 +600,7 @@ footer.foot .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:
 
     <!-- Kandang -->
     <section id="av-kandang" class="view" hidden style="display:grid;gap:18px">
-      <div class="page-head"><div><h1>Stok Kandang</h1><p>Kandang Cibubur · diperbarui 1 Okt 2026, 06.10</p></div><button class="btn btn-primary" data-toast="Form penerimaan kambing dari peternak dibuka">+ Terima kambing</button></div>
+      <div class="page-head"><div><h1>Stok Kandang</h1><p>Kandang Tangerang · diperbarui 1 Okt 2026, 06.10</p></div><button class="btn btn-primary" data-toast="Form penerimaan kambing dari peternak dibuka">+ Terima kambing</button></div>
       <div class="kandang" id="kandang"></div>
       <div class="note"><svg width="18" height="18"><use href="#i-info"/></svg><span>Kambing yang sudah dipesan (dikunci) tidak bisa dipilih pelanggan lain. Stok tipe A tinggal sedikit, jadwalkan pembelian dari peternak Boyolali minggu ini.</span></div>
     </section>
@@ -772,7 +772,7 @@ function renderWizard(){
       <div class="field"><label for="f-jam">Jam tiba masakan</label><select class="input" id="f-jam" name="jam">${['09:00','10:00','11:00','13:00','15:00','16:00'].map(j=>`<option ${j===W.jam?'selected':''}>${j}</option>`).join('')}</select></div>
     </div>
     <div class="note"><svg width="18" height="18"><use href="#i-info"/></svg><span>${fmtDate(W.tglAcara)} adalah <b>hari ke-${hr}</b> sejak kelahiran${[7,14,21].includes(hr)?', sesuai waktu yang dianjurkan.':'. Waktu yang dianjurkan adalah hari ke-7, 14 atau 21.'} Penyembelihan dilakukan pukul 06.00–08.00 pada hari yang sama.</span></div>
-    <div class="field"><label>Wilayah pengantaran</label><div class="choice-grid">${choice('zona','jabo',W.zona,'Jabodetabek','','Gratis ongkir')}${choice('zona','bdg',W.zona,'Bandung Raya','',rp(ONGKIR.bdg))}${choice('zona','ambil',W.zona,'Ambil di dapur','Cibubur','Gratis')}</div></div>
+    <div class="field"><label>Wilayah pengantaran</label><div class="choice-grid">${choice('zona','jabo',W.zona,'Jabodetabek','','Gratis ongkir')}${choice('zona','bdg',W.zona,'Bandung Raya','',rp(ONGKIR.bdg))}${choice('zona','ambil',W.zona,'Ambil di dapur','Tangerang','Gratis')}</div></div>
     ${W.zona!=='ambil'?`<div class="field"><label for="f-alamat">Alamat lengkap</label><textarea class="input" id="f-alamat" name="alamat">${W.alamat}</textarea><span class="hint">Sertakan patokan agar kurir mudah menemukan lokasi.</span></div>`:''}`;
   } else {
     h=`<div><p class="eyebrow">Langkah 4 dari 4</p><h2 style="margin-top:6px">Pembayaran</h2></div>
@@ -820,7 +820,7 @@ const TL=[
   {s:'done',t:'Pesanan dikonfirmasi',d:'Pembayaran lunas via BCA virtual account.',w:'26 Sep, 20.14'},
   {s:'done',t:'Kambing dipilih & dikunci',d:'2 ekor tipe C, bobot 29,4 kg dan 30,1 kg. Foto dikirim ke WhatsApp.',w:'27 Sep, 09.30'},
   {s:'done',t:'Disembelih',d:'Oleh Ust. Ahmad Syukri (juru sembelih halal bersertifikat). Nama ananda dibacakan.',w:'1 Okt, 07.42'},
-  {s:'now',t:'Dimasak',d:'Sate dan gule sedang dimasak di dapur Cibubur.',w:'1 Okt, 08.30'},
+  {s:'now',t:'Dimasak',d:'Sate dan gule sedang dimasak di dapur Tangerang.',w:'1 Okt, 08.30'},
   {s:'',t:'Diantar',d:'Perkiraan berangkat 10.45, tiba 11.30 WIB.',w:'—'},
   {s:'',t:'Selesai',d:'Sertifikat dan foto acara tersimpan di riwayat pesanan.',w:'—'},
 ];
