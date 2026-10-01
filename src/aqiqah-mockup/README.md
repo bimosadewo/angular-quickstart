@@ -16,4 +16,6 @@ Buka `index.html` langsung di browser, atau setelah deploy Netlify di `/aqiqah-m
 - Pesanan: pencarian, filter status, drawer detail dengan ubah status, tagih WhatsApp, invoice.
 - Jadwal Potong & Kirim (mingguan), Stok Kandang (jantan/betina, dikunci vs tersedia), Keuangan (omzet, laba, komposisi, piutang DP), Pelanggan.
 
+**Form input** (`form.html`): redesign `genz/inputh/form.php` — field Jenis Kelamin, Anak ke, Ayah, Ibu, Tkm, Jumlah Kambing, Tipe Box, Nama Box, Jumlah Box diambil dari form asli; opsi pilihan dan harga masih contoh.
+
 Semua data di dalam mockup adalah contoh. Field database asli (tabel pesanan di phpMyAdmin) belum dipetakan karena server tidak dapat diakses dari lingkungan pembuatan mockup.
