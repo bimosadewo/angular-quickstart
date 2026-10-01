@@ -1,21 +1,24 @@
 # Mockup Habib Aqiqah
 
-Prototipe klik-able (satu file HTML, tanpa build) untuk redesign aplikasi aqiqah.
+Redesign aplikasi aqiqah, gaya mengikuti repo `ulasanaku` (netral + aksen teal, font sistem). Satu file HTML per halaman, tanpa build.
 
-Buka `index.html` langsung di browser, atau setelah deploy Netlify di `/aqiqah-mockup/`.
+| File | Isi |
+|---|---|
+| `form.html` | Redesign `genz/inputh/form.php`. **Siap pakai**: 31 field dengan `name` dan nilai pilihan yang sama persis, `action="insertdata.php"`, `method="POST"`. Di domain habibaqiqah.com form langsung terkirim; di tempat lain tampil pratinjau data. |
+| `index.html` | Prototipe aplikasi: sisi pelanggan (beranda, pesan 4 langkah, lacak) dan panel admin (dashboard, pesanan, jadwal, stok, keuangan, pelanggan). |
 
-## Isi
+## Memasang form baru di server
 
-**Pelanggan**
-- Beranda: hero dengan contoh pantauan live, ketentuan sunnah (L 2 ekor / P 1 ekor), paket (Potong Saja, Siap Saji, Nasi Box), daftar harga & stok per tipe kambing, alur layanan, ulasan.
-- Pesan Aqiqah: wizard 4 langkah (data anak → kambing & paket → jadwal & alamat → pembayaran) dengan ringkasan harga live, hitung hari ke-7/14/21, DP 50% atau lunas, VA/QRIS.
-- Lacak Pesanan: timeline status, video penyembelihan, foto, dan sertifikat aqiqah.
+1. Backup `genz/inputh/form.php` (mis. `form.php.bak`).
+2. Upload `form.html` ke `genz/inputh/`, lalu ganti nama menjadi `form.php` (atau simpan sebagai `form2.php` untuk uji coba dulu).
+3. Isi satu data uji dan pastikan masuk ke database lewat `insertdata.php`.
 
-**Panel Admin**
-- Dashboard: KPI, grafik ekor terjual per minggu, agenda hari ini, pesanan yang perlu tindakan.
-- Pesanan: pencarian, filter status, drawer detail dengan ubah status, tagih WhatsApp, invoice.
-- Jadwal Potong & Kirim (mingguan), Stok Kandang (jantan/betina, dikunci vs tersedia), Keuangan (omzet, laba, komposisi, piutang DP), Pelanggan.
+Catatan perilaku yang berbeda dari form lama:
+- Nominal rupiah diketik dengan titik ribuan, tetapi dikirim sebagai angka murni.
+- Biaya bungkus, ongkir, biaya lain, dan discount yang dikosongkan dikirim sebagai `0` (form lama mewajibkan diisi).
+- Draf tersimpan di browser sampai data terkirim.
 
-**Form input** (`form.html`): redesign `genz/inputh/form.php` — field Jenis Kelamin, Anak ke, Ayah, Ibu, Tkm, Jumlah Kambing, Tipe Box, Nama Box, Jumlah Box diambil dari form asli; opsi pilihan dan harga masih contoh.
+## Data
 
-Semua data di dalam mockup adalah contoh. Field database asli (tabel pesanan di phpMyAdmin) belum dipetakan karena server tidak dapat diakses dari lingkungan pembuatan mockup.
+- Field dan pilihan (Dapur, Courier, Agen, CS, Tkm, Jumlah Kambing, Tipe Box, Nama Box, Jumlah Box, Bank) diambil dari `form.php` asli.
+- **Harga dan baris pesanan di `index.html` adalah contoh.** `aqiqahasli.php` membutuhkan login, jadi data tabel asli belum dipakai. Untuk memakai data asli: export tabel dari phpMyAdmin (database `jof43217_aqasli`) ke CSV.

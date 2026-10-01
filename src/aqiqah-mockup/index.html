@@ -4,34 +4,32 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Habib Aqiqah</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap">
 <style>
-/* Layout: mode switch (Pelanggan / Admin) on top. Pelanggan = mobile-first storefront + order wizard + tracking.
+/* Gaya mengikuti UlasanAku (netral + aksen teal, font sistem).
+   Layout: mode switch (Pelanggan / Admin) on top. Pelanggan = mobile-first storefront + order wizard + tracking.
    Admin = sidebar workspace (collapses to a scrolling tab row on phones) with tables, drawer, kandang, jadwal, keuangan. */
 :root{
-  --bg:#F5F7F3; --surface:#FFFFFF; --surface-2:#EDF1EB; --ink:#13201A; --muted:#5A6A61; --line:#DCE3DA;
-  --brand:#0E5A43; --brand-2:#0A4433; --brand-ink:#FFFFFF; --brand-soft:#E1EEE7;
-  --gold:#B97C0C; --gold-soft:#FBF0D8; --gold-ink:#3A2600;
-  --ok:#1F8A4C; --ok-soft:#DFF3E6; --warn:#A8670D; --warn-soft:#FCEFD6; --bad:#B4372A; --bad-soft:#FBE3E0; --info:#2457C5; --info-soft:#E2EAFB;
-  --shadow:0 1px 2px rgba(15,40,30,.06),0 8px 24px rgba(15,40,30,.07);
-  --f-display:"Bricolage Grotesque","Plus Jakarta Sans",system-ui,sans-serif;
-  --f-body:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --f-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
-  --r-sm:8px; --r:14px; --r-lg:22px;
+  --bg:#f6f7f9; --surface:#ffffff; --surface-2:#f3f4f6; --ink:#111827; --muted:#6b7280; --line:#e5e7eb;
+  --brand:#0f766e; --brand-2:#0b5f58; --brand-ink:#ffffff; --brand-soft:#e6f4f2;
+  --gold:#b45309; --gold-soft:#fdf3e2; --gold-ink:#ffffff;
+  --ok:#15803d; --ok-soft:#e8f5ec; --warn:#b45309; --warn-soft:#fdf3e2; --bad:#b91c1c; --bad-soft:#fdeceb; --info:#1d4ed8; --info-soft:#e9effd;
+  --shadow:0 1px 3px rgba(17,24,39,.06),0 1px 2px rgba(17,24,39,.04);
+  --f-display:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+  --f-body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+  --f-mono:ui-monospace,SFMono-Regular,"Cascadia Mono",Consolas,monospace;
+  --r-sm:6px; --r:10px; --r-lg:14px;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0D1411; --surface:#141E19; --surface-2:#1B2721; --ink:#E6EEE9; --muted:#93A69B; --line:#26362E;
-  --brand:#3DB487; --brand-2:#2F9B72; --brand-ink:#05140D; --brand-soft:#16332A;
-  --gold:#E8B24A; --gold-soft:#2C2413; --gold-ink:#1B1200;
-  --ok:#4ADE80; --ok-soft:#163222; --warn:#F2C14E; --warn-soft:#30260F; --bad:#F87171; --bad-soft:#3A1B19; --info:#7AA7FF; --info-soft:#18233D;
+  --bg:#0f1214; --surface:#171b1e; --surface-2:#22282c; --ink:#e8ecee; --muted:#9aa4ab; --line:#2a3135;
+  --brand:#2bb3a3; --brand-2:#38c7b6; --brand-ink:#04201d; --brand-soft:#173431;
+  --gold:#f2c14e; --gold-soft:#30260f; --gold-ink:#1b1200;
+  --ok:#4ade80; --ok-soft:#15301f; --warn:#f2c14e; --warn-soft:#30260f; --bad:#f87171; --bad-soft:#3a1b19; --info:#7aa7ff; --info-soft:#18233d;
   --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.3); color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#0D1411; --surface:#141E19; --surface-2:#1B2721; --ink:#E6EEE9; --muted:#93A69B; --line:#26362E;
-  --brand:#3DB487; --brand-2:#2F9B72; --brand-ink:#05140D; --brand-soft:#16332A;
-  --gold:#E8B24A; --gold-soft:#2C2413; --gold-ink:#1B1200;
-  --ok:#4ADE80; --ok-soft:#163222; --warn:#F2C14E; --warn-soft:#30260F; --bad:#F87171; --bad-soft:#3A1B19; --info:#7AA7FF; --info-soft:#18233D;
+  --bg:#0f1214; --surface:#171b1e; --surface-2:#22282c; --ink:#e8ecee; --muted:#9aa4ab; --line:#2a3135;
+  --brand:#2bb3a3; --brand-2:#38c7b6; --brand-ink:#04201d; --brand-soft:#173431;
+  --gold:#f2c14e; --gold-soft:#30260f; --gold-ink:#1b1200;
+  --ok:#4ade80; --ok-soft:#15301f; --warn:#f2c14e; --warn-soft:#30260f; --bad:#f87171; --bad-soft:#3a1b19; --info:#7aa7ff; --info-soft:#18233d;
   --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.3); color-scheme:dark}
 
 *{box-sizing:border-box}
@@ -139,7 +137,7 @@ textarea.input{resize:vertical;min-height:84px}
 .sunnah-card .goats{display:flex;gap:4px;color:var(--brand)}
 .sunnah-card b{font-family:var(--f-display);font-size:19px}
 
-.paket-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.paket-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
 @media (max-width:900px){.paket-grid{grid-template-columns:1fr}}
 .paket{border:1px solid var(--line);background:var(--surface);border-radius:var(--r-lg);padding:22px;display:flex;flex-direction:column;gap:14px;position:relative;transition:transform .2s,box-shadow .2s}
 .paket:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
@@ -147,7 +145,7 @@ textarea.input{resize:vertical;min-height:84px}
 .paket.featured .muted,.paket.featured li{color:color-mix(in srgb,var(--brand-ink) 82%,transparent)}
 .paket .tag{position:absolute;top:18px;right:18px;background:var(--gold);color:var(--gold-ink);font-size:11px;font-weight:800;padding:4px 9px;border-radius:999px;letter-spacing:.04em}
 .paket h3{font-size:22px}
-.paket .price{font-family:var(--f-display);font-size:30px;font-weight:800;letter-spacing:-.02em}
+.paket .price{font-family:var(--f-display);font-size:24px;font-weight:800;letter-spacing:-.02em}
 .paket .price small{font-family:var(--f-body);font-size:13px;font-weight:500;opacity:.75}
 .paket ul{margin:0;padding:0;list-style:none;display:grid;gap:8px;font-size:14px}
 .paket li{display:flex;gap:9px;align-items:flex-start}
@@ -391,7 +389,7 @@ footer.foot .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:
   <div class="wrap">
     <button class="logo" id="logoBtn" aria-label="Habib Aqiqah, ke beranda">
       <span class="logo-mark"><svg width="22" height="18"><use href="#i-goat"/></svg></span>
-      <span>Habib Aqiqah<small>Aqiqah sesuai sunnah · sejak 2012</small></span>
+      <span>Habib Aqiqah<small>Aqiqah sesuai sunnah</small></span>
     </button>
     <div class="seg" role="group" aria-label="Pilih tampilan">
       <button id="modeCust" aria-pressed="true">Pelanggan</button>
@@ -421,9 +419,9 @@ footer.foot .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:
           <button class="btn btn-ghost" data-go="lacak">Lacak pesanan</button>
         </div>
         <div class="trust">
-          <div><b class="num">12.480</b><span>keluarga terlayani</span></div>
-          <div><b class="num">4,9/5</b><span>dari 3.112 ulasan Google</span></div>
-          <div><b class="num">±3 jam</b><span>potong sampai antar</span></div>
+          <div><b>7 paket</b><span>dari Masak Saja sampai Paket Lux</span></div>
+          <div><b>4 tipe box</b><span>bento, box, bungkus, grongsong</span></div>
+          <div><b>50–200</b><span>pilihan jumlah box</span></div>
         </div>
       </div>
       <aside class="live-card" aria-label="Contoh pantauan pesanan">
@@ -437,8 +435,8 @@ footer.foot .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:
           <span class="cap">Video penyembelihan · 07.42 WIB</span>
         </div>
         <div class="mini-steps" aria-label="Progres: 3 dari 5 tahap"><i class="on"></i><i class="on"></i><i class="now"></i><i></i><i></i></div>
-        <div class="line"><span>Status</span><b>Sedang dimasak · Gule &amp; Sate</b></div>
-        <div class="line"><span>Estimasi tiba</span><b class="num">11.30 WIB</b></div>
+        <div class="line"><span>Status</span><b>Sedang dimasak · Kebuli Basmati</b></div>
+        <div class="line"><span>Jam di lokasi</span><b class="num">11.00 WIB</b></div>
       </aside>
     </section>
 
@@ -458,33 +456,33 @@ footer.foot .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:
 
     <section class="wrap section">
       <div class="section-head">
-        <div><p class="eyebrow">Paket</p><h2>Pilih cara penyajian</h2></div>
-        <p class="muted" style="max-width:40ch;font-size:14px">Harga paket di bawah untuk 1 ekor kambing tipe B. Tipe kambing bisa diganti saat memesan.</p>
+        <div><p class="eyebrow">Nama box</p><h2>Pilih paket</h2></div>
+        <p class="muted" style="max-width:40ch;font-size:14px">Pilihan paket sama dengan form input. Harga yang tampil adalah contoh.</p>
       </div>
       <div class="paket-grid" id="paketGrid"></div>
     </section>
 
     <section class="wrap section">
-      <div class="section-head"><div><p class="eyebrow">Daftar harga kambing</p><h2>Tipe &amp; bobot hidup</h2></div><p class="muted" style="font-size:14px">Harga per ekor, sudah termasuk potong &amp; kemas.</p></div>
-      <div class="tipe-table-wrap"><table><thead><tr><th>Tipe</th><th>Bobot hidup</th><th>Perkiraan hasil masak</th><th class="r">Harga / ekor</th><th class="r">Stok</th></tr></thead><tbody id="tipeBody"></tbody></table></div>
+      <div class="section-head"><div><p class="eyebrow">Kambing</p><h2>Jantan atau betina</h2></div><p class="muted" style="font-size:14px">Harga per ekor (contoh).</p></div>
+      <div class="tipe-table-wrap"><table><thead><tr><th>Kambing</th><th>Keterangan</th><th class="r">Harga / ekor</th><th class="r">Stok</th></tr></thead><tbody id="tipeBody"></tbody></table></div>
     </section>
 
     <section class="wrap section">
       <div class="section-head"><div><p class="eyebrow">Alur layanan</p><h2>Dari pesan sampai hidangan</h2></div></div>
       <div class="how">
-        <div><h4>Isi data &amp; pilih paket</h4><p>Nama anak, tanggal lahir, tipe kambing dan menu. Total biaya langsung terlihat.</p></div>
-        <div><h4>Bayar DP 50%</h4><p>Transfer bank atau QRIS. Konfirmasi otomatis, tanpa kirim bukti lewat chat.</p></div>
+        <div><h4>Isi data &amp; pilih paket</h4><p>Data anak, kambing jantan/betina, nama box dan jumlah box. Total biaya langsung terlihat.</p></div>
+        <div><h4>Bayar DP 50%</h4><p>Transfer ke BSI, BCA, BRI, Mandiri, Mega, Bukopin, atau CIMB Niaga.</p></div>
         <div><h4>Disembelih &amp; didokumentasikan</h4><p>Nama anak dibacakan saat penyembelihan. Video dan foto dikirim ke WhatsApp.</p></div>
         <div><h4>Dimasak &amp; diantar</h4><p>Masakan tiba hangat di lokasi acara, lengkap dengan sertifikat aqiqah.</p></div>
       </div>
     </section>
 
     <section class="wrap section">
-      <div class="section-head"><div><p class="eyebrow">Kata pelanggan</p><h2>Ulasan terbaru</h2></div></div>
+      <div class="section-head"><div><p class="eyebrow">Contoh tampilan</p><h2>Ulasan pelanggan</h2></div><p class="muted" style="font-size:14px">Tempat untuk ulasan Google asli. Teks di bawah hanya contoh.</p></div>
       <div class="testi">
-        <figure><span class="stars">★★★★★</span><blockquote>Videonya dikirim pagi-pagi, nama anak kami disebut jelas. Satenya empuk, tamu banyak yang tanya pesan di mana.</blockquote><figcaption><span class="avatar">RA</span><span><b>Rina Apriliani</b><br><span class="muted">Bekasi · Paket Nasi Box</span></span></figcaption></figure>
-        <figure><span class="stars">★★★★★</span><blockquote>Bisa pantau sendiri dari HP, jadi tidak perlu bolak-balik tanya admin. Datang tepat jam 11 sesuai jadwal.</blockquote><figcaption><span class="avatar">FH</span><span><b>Fajar Hidayat</b><br><span class="muted">Depok · Paket Siap Saji</span></span></figcaption></figure>
-        <figure><span class="stars">★★★★★</span><blockquote>Kambingnya bisa dipilih langsung lewat foto. Pelayanan ramah, sertifikatnya rapi untuk kenang-kenangan.</blockquote><figcaption><span class="avatar">NS</span><span><b>Nur Salsabila</b><br><span class="muted">Tangerang Selatan · Tipe C</span></span></figcaption></figure>
+        <figure><span class="stars">★★★★★</span><blockquote>Videonya dikirim pagi-pagi, nama anak kami disebut jelas. Satenya empuk, tamu banyak yang tanya pesan di mana.</blockquote><figcaption><span class="avatar">RA</span><span><b>Nama pelanggan</b><br><span class="muted">Contoh · Paket Hemat</span></span></figcaption></figure>
+        <figure><span class="stars">★★★★★</span><blockquote>Bisa pantau sendiri dari HP, jadi tidak perlu bolak-balik tanya admin. Datang tepat jam 11 sesuai jadwal.</blockquote><figcaption><span class="avatar">FH</span><span><b>Nama pelanggan</b><br><span class="muted">Contoh · Paket Istimewa</span></span></figcaption></figure>
+        <figure><span class="stars">★★★★★</span><blockquote>Kambingnya bisa dipilih langsung lewat foto. Pelayanan ramah, sertifikatnya rapi untuk kenang-kenangan.</blockquote><figcaption><span class="avatar">NS</span><span><b>Nama pelanggan</b><br><span class="muted">Contoh · Kebuli Basmati</span></span></figcaption></figure>
       </div>
       <div class="cta-band">
         <div><h3>Hari ke-7 sudah dekat?</h3><p>Pemesanan H-2 masih bisa kami proses untuk wilayah Jabodetabek.</p></div>
@@ -518,9 +516,9 @@ footer.foot .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:
           <input class="input mono" id="trackId" value="HA-2610-0142" aria-label="Nomor pesanan atau nomor WhatsApp">
           <button class="btn btn-primary" type="submit"><svg width="16" height="16"><use href="#i-search"/></svg>Lacak</button>
         </form>
-        <div class="line" style="flex-wrap:wrap"><span>Muhammad Al-Fatih bin Rizky · 2 ekor tipe C · Paket Siap Saji</span><span class="pill s-masak">Dimasak</span></div>
+        <div class="line" style="flex-wrap:wrap"><span>Muhammad Al-Fatih bin Rizky Pratama · 2 ekor jantan · Paket Kebuli Basmati · 100 box</span><span class="pill s-masak">Dimasak</span></div>
         <ol class="timeline" id="timeline"></ol>
-        <div class="note"><svg width="18" height="18"><use href="#i-truck"/></svg><span>Kurir <b>Pak Dedi (B 9123 KXT)</b> akan berangkat pukul 10.45. Nomor kurir: <span class="mono">0813-1122-7788</span></span></div>
+        <div class="note"><svg width="18" height="18"><use href="#i-truck"/></svg><span>Courier <b>Joko</b> berangkat pukul 09.30 dan dijadwalkan tiba di lokasi pukul 11.00.</span></div>
       </section>
       <section style="display:grid;gap:18px;min-width:0">
         <div class="panel">
@@ -577,7 +575,7 @@ footer.foot .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:
       </div>
       <div class="card">
         <div class="card-h"><h3>Perlu tindakan</h3><button class="btn btn-ghost btn-sm" data-av-go="pesanan">Semua pesanan</button></div>
-        <div class="table-wrap"><table><thead><tr><th>No. pesanan</th><th>Anak / orang tua</th><th>Acara</th><th>Paket</th><th class="r">Total</th><th>Status</th></tr></thead><tbody id="actionBody"></tbody></table></div>
+        <div class="table-wrap"><table><thead><tr><th>No. pesanan</th><th>Anak / orang tua</th><th>Antar</th><th>Nama box</th><th class="r">Total</th><th>Status</th></tr></thead><tbody id="actionBody"></tbody></table></div>
       </div>
     </section>
 
@@ -588,7 +586,7 @@ footer.foot .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:
         <input class="input" id="q" placeholder="Cari nama anak, orang tua, no. pesanan…" aria-label="Cari pesanan">
         <div class="chips" id="statusChips"></div>
       </div>
-      <div class="card"><div class="table-wrap"><table><thead><tr><th>No. pesanan</th><th>Anak / orang tua</th><th>Kambing</th><th>Paket</th><th>Tgl acara</th><th>Pembayaran</th><th class="r">Total</th><th>Status</th></tr></thead><tbody id="orderBody"></tbody></table></div></div>
+      <div class="card"><div class="table-wrap"><table><thead><tr><th>No. pesanan</th><th>Anak / orang tua</th><th>Kambing</th><th>Nama box</th><th>Antar</th><th>Dapur / tim</th><th>Pembayaran</th><th class="r">Total</th><th>Status</th></tr></thead><tbody id="orderBody"></tbody></table></div></div>
     </section>
 
     <!-- Jadwal -->
@@ -602,7 +600,7 @@ footer.foot .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:
     <section id="av-kandang" class="view" hidden style="display:grid;gap:18px">
       <div class="page-head"><div><h1>Stok Kandang</h1><p>Kandang Tangerang · diperbarui 1 Okt 2026, 06.10</p></div><button class="btn btn-primary" data-toast="Form penerimaan kambing dari peternak dibuka">+ Terima kambing</button></div>
       <div class="kandang" id="kandang"></div>
-      <div class="note"><svg width="18" height="18"><use href="#i-info"/></svg><span>Kambing yang sudah dipesan (dikunci) tidak bisa dipilih pelanggan lain. Stok tipe A tinggal sedikit, jadwalkan pembelian dari peternak Boyolali minggu ini.</span></div>
+      <div class="note"><svg width="18" height="18"><use href="#i-info"/></svg><span>Kambing yang sudah dipesan (dikunci) tidak bisa dipilih pelanggan lain. Stok dicatat per dapur: Own dan Resourcing.</span></div>
     </section>
 
     <!-- Keuangan -->
@@ -638,40 +636,43 @@ function toast(msg){const t=$('#toast');t.textContent=msg;t.classList.add('show'
 document.addEventListener('click',e=>{const b=e.target.closest('[data-toast]');if(b)toast(b.dataset.toast)});
 
 /* ---------- data ---------- */
-const TIPE=[
-  {k:'A',w:'20–23 kg',hasil:'± 60 tusuk sate + 35 porsi gule',harga:2150000,stok:4},
-  {k:'B',w:'24–27 kg',hasil:'± 80 tusuk sate + 45 porsi gule',harga:2550000,stok:17},
-  {k:'C',w:'28–31 kg',hasil:'± 100 tusuk sate + 55 porsi gule',harga:2950000,stok:22},
-  {k:'D',w:'32–35 kg',hasil:'± 120 tusuk sate + 65 porsi gule',harga:3450000,stok:11},
-  {k:'Super',w:'36–40 kg',hasil:'± 150 tusuk sate + 80 porsi gule',harga:4250000,stok:6},
-];
+/* Pilihan = sama dengan genz/inputh/form.php. HARGA_* = contoh, ganti dengan daftar harga asli. */
+const TKM=[{k:'jantan',n:'Jantan',d:'Dianjurkan untuk aqiqah',harga:3200000,stok:34},{k:'betina',n:'Betina',d:'Sah untuk aqiqah',harga:2700000,stok:26}];
 const PAKET=[
-  {id:'potong',nama:'Potong Saja',desc:'Daging mentah bersih, dikemas vakum per 1 kg.',tambah:0,box:false,feat:['Penyembelihan sesuai syariat','Video & foto dokumentasi','Daging dikemas vakum','Sertifikat aqiqah']},
-  {id:'saji',nama:'Siap Saji',desc:'Dimasak koki kami, diantar hangat dalam wadah prasmanan.',tambah:450000,box:false,feat:['Semua di Potong Saja','2 menu masakan pilihan','Acar, sambal & bumbu kacang','Gratis ongkir Jabodetabek']},
-  {id:'box',nama:'Nasi Box',desc:'Siap dibagikan ke tetangga & kerabat, lengkap dengan kartu ucapan.',tambah:450000,box:true,feat:['Semua di Siap Saji','Nasi box isi sate, gule, acar, buah','Stiker nama anak di box','Kartu doa & ucapan terima kasih']},
+  {id:'MasakSaja',nama:'Masak Saja',desc:'Daging dimasak tanpa nasi box.',hBox:0,hMasak:450000},
+  {id:'PaketEkonomis',nama:'Paket Ekonomis',desc:'',hBox:22000,hMasak:0},
+  {id:'PaketHemat',nama:'Paket Hemat',desc:'',hBox:26000,hMasak:0},
+  {id:'PaketIstimewa',nama:'Paket Istimewa',desc:'',hBox:32000,hMasak:0},
+  {id:'PaketKebuliBiasa',nama:'Paket Kebuli Biasa',desc:'Nasi kebuli.',hBox:35000,hMasak:0},
+  {id:'PaketKebuliBasmati',nama:'Paket Kebuli Basmati',desc:'Nasi kebuli beras basmati.',hBox:42000,hMasak:0},
+  {id:'PaketLux',nama:'Paket Lux',desc:'',hBox:48000,hMasak:0},
 ];
-const MENU=[{id:'sg',n:'Sate + Gule',p:0},{id:'st',n:'Sate + Tongseng',p:0},{id:'gk',n:'Gule + Krengsengan',p:0},{id:'kg',n:'Kambing Guling',p:750000}];
-const BOX_PRICE=27500;
-const ONGKIR={jabo:0,bdg:150000,ambil:0};
+const TYPBOX=['Bento','Box','Bungkus','Grongsong'];
+const JBX=[50,60,70,80,100,120,140,160,200];
+const BANK=[['bsi','BSI'],['bca','BCA'],['bri','BRI'],['mandiri','Mandiri'],['mega','Mega'],['bukopin','Bukopin'],['cimbniaga','CIMB Niaga'],['lainnya','Lainnya']];
+const DAPUR={own:'Own',resourcing:'Resourcing'},COURIER={joko:'Joko',mumu:'Mumu',lalamove:'Lalamove',indrive:'Indrive',grab:'Grab'},AGEN={mampang:'Mampang',suheri:'Suheri',lainnya:'Lainnya'},CS={nita:'Nita',alimah:'Alimah',ega:'Ega'};
+const ONGKIR={jabo:0,luar:150000};
+const bankName=k=>(BANK.find(b=>b[0]===k)||[,k])[1];
 
 const STATUS=[
   {k:'baru',n:'Baru'},{k:'dp',n:'DP'},{k:'lunas',n:'Lunas'},{k:'potong',n:'Disembelih'},{k:'masak',n:'Dimasak'},{k:'kirim',n:'Dikirim'},{k:'selesai',n:'Selesai'}
 ];
 const sName=k=>(STATUS.find(s=>s.k===k)||{n:k}).n;
+/* Baris contoh dengan kolom tabel form.php (data asli aqiqahasli.php butuh login) */
 const ORDERS=[
-  {id:'HA-2610-0142',anak:'Muhammad Al-Fatih',ortu:'Rizky Pratama',jk:'L',ekor:2,tipe:'C',paket:'saji',menu:'Sate + Gule',tgl:'1 Okt',kota:'Jakarta Timur',wa:'0812-xxxx-4410',total:6800000,bayar:6800000,status:'masak'},
-  {id:'HA-2610-0141',anak:'Aisyah Humaira',ortu:'Dian Lestari',jk:'P',ekor:1,tipe:'B',paket:'box',menu:'Sate + Gule',box:60,tgl:'1 Okt',kota:'Bekasi',wa:'0857-xxxx-2290',total:4650000,bayar:4650000,status:'kirim'},
-  {id:'HA-2610-0140',anak:'Umar Abdurrahman',ortu:'Hendra Wijaya',jk:'L',ekor:2,tipe:'D',paket:'box',menu:'Sate + Tongseng',box:120,tgl:'2 Okt',kota:'Depok',wa:'0821-xxxx-9012',total:11100000,bayar:5550000,status:'dp'},
-  {id:'HA-2610-0139',anak:'Zahra Khairunnisa',ortu:'Siti Marlina',jk:'P',ekor:1,tipe:'A',paket:'potong',menu:'-',tgl:'2 Okt',kota:'Jakarta Selatan',wa:'0813-xxxx-5521',total:2150000,bayar:0,status:'baru'},
-  {id:'HA-2610-0138',anak:'Hafiz Arrayyan',ortu:'Bayu Saputra',jk:'L',ekor:2,tipe:'B',paket:'saji',menu:'Gule + Krengsengan',tgl:'3 Okt',kota:'Tangerang',wa:'0812-xxxx-3380',total:6000000,bayar:3000000,status:'dp'},
-  {id:'HA-2610-0137',anak:'Khadijah Azzahra',ortu:'Rahmat Hidayat',jk:'P',ekor:1,tipe:'Super',paket:'saji',menu:'Kambing Guling',tgl:'3 Okt',kota:'Bogor',wa:'0878-xxxx-1104',total:5450000,bayar:0,status:'baru'},
-  {id:'HA-2610-0136',anak:'Ibrahim Al-Ghazali',ortu:'Yusuf Maulana',jk:'L',ekor:2,tipe:'C',paket:'box',menu:'Sate + Gule',box:100,tgl:'4 Okt',kota:'Bandung',wa:'0811-xxxx-7765',total:9600000,bayar:9600000,status:'lunas'},
-  {id:'HA-2610-0135',anak:'Naura Salsabila',ortu:'Eka Putri',jk:'P',ekor:1,tipe:'B',paket:'saji',menu:'Sate + Tongseng',tgl:'4 Okt',kota:'Jakarta Barat',wa:'0896-xxxx-0032',total:3000000,bayar:1500000,status:'dp'},
-  {id:'HA-2609-0134',anak:'Rafa Alkhalifi',ortu:'Agus Setiawan',jk:'L',ekor:2,tipe:'B',paket:'saji',menu:'Sate + Gule',tgl:'30 Sep',kota:'Bekasi',wa:'0815-xxxx-6620',total:6000000,bayar:6000000,status:'selesai'},
-  {id:'HA-2609-0133',anak:'Alesha Kirana',ortu:'Wulan Sari',jk:'P',ekor:1,tipe:'C',paket:'box',menu:'Sate + Gule',box:50,tgl:'29 Sep',kota:'Depok',wa:'0822-xxxx-4471',total:4775000,bayar:4775000,status:'selesai'},
-  {id:'HA-2610-0143',anak:'Yusuf Hamizan',ortu:'Lukman Hakim',jk:'L',ekor:2,tipe:'A',paket:'potong',menu:'-',tgl:'5 Okt',kota:'Jakarta Timur',wa:'0812-xxxx-8892',total:4300000,bayar:0,status:'baru'},
+  {id:'HA-2610-0142',anak:'Muhammad Al-Fatih',ortu:'Rizky Pratama',ibu:'Nurul Aini',jk:'L',lahirdi:'Tangerang',anakke:1,tkm:'jantan',ekor:2,paket:'PaketKebuliBasmati',typbox:'Box',box:100,tgl:'1 Okt',jam:'11:00',brgkt:'09:30',kota:'Karawaci, Tangerang',kdpos:'15115',dapur:'own',courier:'joko',agen:'',cs:'nita',bank:'bca',wa:'0812-xxxx-4410',total:10600000,bayar:10600000,status:'masak'},
+  {id:'HA-2610-0141',anak:'Aisyah Humaira',ortu:'Dian Lestari',ibu:'Rina',jk:'P',lahirdi:'Bekasi',anakke:2,tkm:'betina',ekor:1,paket:'PaketHemat',typbox:'Bento',box:60,tgl:'1 Okt',jam:'10:30',brgkt:'09:15',kota:'Bekasi Utara',kdpos:'17123',dapur:'own',courier:'lalamove',agen:'',cs:'alimah',bank:'bsi',wa:'0857-xxxx-2290',total:4260000,bayar:4260000,status:'kirim'},
+  {id:'HA-2610-0140',anak:'Umar Abdurrahman',ortu:'Hendra Wijaya',ibu:'Maya',jk:'L',lahirdi:'Depok',anakke:1,tkm:'jantan',ekor:2,paket:'PaketLux',typbox:'Box',box:120,tgl:'2 Okt',jam:'11:00',brgkt:'09:45',kota:'Beji, Depok',kdpos:'16421',dapur:'resourcing',courier:'mumu',agen:'mampang',cs:'ega',bank:'mandiri',wa:'0821-xxxx-9012',total:12160000,bayar:6080000,status:'dp'},
+  {id:'HA-2610-0139',anak:'Zahra Khairunnisa',ortu:'Siti Marlina',ibu:'Siti Marlina',jk:'P',lahirdi:'Jakarta',anakke:3,tkm:'betina',ekor:1,paket:'MasakSaja',typbox:'',box:50,tgl:'2 Okt',jam:'13:00',brgkt:'11:30',kota:'Jakarta Selatan',kdpos:'12510',dapur:'own',courier:'grab',agen:'',cs:'nita',bank:'',wa:'0813-xxxx-5521',total:3150000,bayar:0,status:'baru'},
+  {id:'HA-2610-0138',anak:'Hafiz Arrayyan',ortu:'Bayu Saputra',ibu:'Lestari',jk:'L',lahirdi:'Tangerang',anakke:1,tkm:'jantan',ekor:2,paket:'PaketIstimewa',typbox:'Box',box:80,tgl:'3 Okt',jam:'11:00',brgkt:'09:30',kota:'Cipondoh, Tangerang',kdpos:'15148',dapur:'own',courier:'joko',agen:'',cs:'alimah',bank:'bca',wa:'0812-xxxx-3380',total:8960000,bayar:4480000,status:'dp'},
+  {id:'HA-2610-0137',anak:'Khadijah Azzahra',ortu:'Rahmat Hidayat',ibu:'Fitri',jk:'P',lahirdi:'Bogor',anakke:2,tkm:'betina',ekor:1,paket:'PaketKebuliBiasa',typbox:'Grongsong',box:70,tgl:'3 Okt',jam:'12:00',brgkt:'09:45',kota:'Bogor Barat',kdpos:'16115',dapur:'resourcing',courier:'indrive',agen:'suheri',cs:'ega',bank:'',wa:'0878-xxxx-1104',total:5300000,bayar:0,status:'baru'},
+  {id:'HA-2610-0136',anak:'Ibrahim Al-Ghazali',ortu:'Yusuf Maulana',ibu:'Khoirunnisa',jk:'L',lahirdi:'Bandung',anakke:1,tkm:'jantan',ekor:2,paket:'PaketKebuliBasmati',typbox:'Box',box:100,tgl:'4 Okt',jam:'11:00',brgkt:'06:30',kota:'Bandung',kdpos:'40115',dapur:'resourcing',courier:'mumu',agen:'lainnya',cs:'nita',bank:'bri',wa:'0811-xxxx-7765',total:10750000,bayar:10750000,status:'lunas'},
+  {id:'HA-2610-0135',anak:'Naura Salsabila',ortu:'Eka Putri',ibu:'Eka Putri',jk:'P',lahirdi:'Jakarta',anakke:1,tkm:'betina',ekor:1,paket:'PaketEkonomis',typbox:'Bungkus',box:60,tgl:'4 Okt',jam:'11:00',brgkt:'09:30',kota:'Jakarta Barat',kdpos:'11410',dapur:'own',courier:'grab',agen:'',cs:'alimah',bank:'cimbniaga',wa:'0896-xxxx-0032',total:4020000,bayar:2010000,status:'dp'},
+  {id:'HA-2609-0134',anak:'Rafa Alkhalifi',ortu:'Agus Setiawan',ibu:'Dewi',jk:'L',lahirdi:'Bekasi',anakke:2,tkm:'jantan',ekor:2,paket:'PaketHemat',typbox:'Bento',box:100,tgl:'30 Sep',jam:'10:30',brgkt:'09:00',kota:'Bekasi',kdpos:'17111',dapur:'own',courier:'joko',agen:'',cs:'nita',bank:'bsi',wa:'0815-xxxx-6620',total:9000000,bayar:9000000,status:'selesai'},
+  {id:'HA-2609-0133',anak:'Alesha Kirana',ortu:'Wulan Sari',ibu:'Wulan Sari',jk:'P',lahirdi:'Depok',anakke:1,tkm:'betina',ekor:1,paket:'PaketIstimewa',typbox:'Box',box:50,tgl:'29 Sep',jam:'11:00',brgkt:'09:45',kota:'Depok',kdpos:'16411',dapur:'own',courier:'mumu',agen:'',cs:'ega',bank:'mega',wa:'0822-xxxx-4471',total:4300000,bayar:4300000,status:'selesai'},
+  {id:'HA-2610-0143',anak:'Yusuf Hamizan',ortu:'Lukman Hakim',ibu:'Aminah',jk:'L',lahirdi:'Jakarta',anakke:4,tkm:'jantan',ekor:2,paket:'MasakSaja',typbox:'',box:50,tgl:'5 Okt',jam:'13:00',brgkt:'11:00',kota:'Jakarta Timur',kdpos:'13120',dapur:'own',courier:'lalamove',agen:'',cs:'nita',bank:'',wa:'0812-xxxx-8892',total:7300000,bayar:0,status:'baru'},
 ];
-const paketName=id=>PAKET.find(p=>p.id===id).nama;
+const paketName=id=>(PAKET.find(p=>p.id===id)||{nama:id}).nama;
 
 /* ---------- mode & routing ---------- */
 const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
@@ -695,7 +696,7 @@ $('#modeAdmin').onclick=()=>setMode('admin');
 $('#logoBtn').onclick=()=>{setMode('cust');custView('beranda')};
 $$('.subnav button').forEach(b=>b.onclick=()=>custView(b.dataset.cv));
 document.addEventListener('click',e=>{
-  const g=e.target.closest('[data-go]');if(g){if(g.dataset.paket){W.paket=g.dataset.paket;renderWizard()}custView(g.dataset.go)}
+  const g=e.target.closest('[data-go]');if(g){if(g.dataset.paket){W.nbx=g.dataset.paket;renderWizard()}custView(g.dataset.go)}
   const a=e.target.closest('[data-av],[data-av-go]');if(a&&!e.target.closest('tr'))adminView(a.dataset.av||a.dataset.avGo);
 });
 $('#themeBtn').onclick=()=>{
@@ -705,27 +706,28 @@ $('#themeBtn').onclick=()=>{
 const savedTheme=store.get('ha-theme');if(savedTheme)document.documentElement.dataset.theme=savedTheme;
 
 /* ---------- beranda ---------- */
-const chk='<svg width="15" height="15"><use href="#i-check"/></svg>';
 $('#paketGrid').innerHTML=PAKET.map(p=>`
-  <article class="paket ${p.id==='saji'?'featured':''}">
-    ${p.id==='saji'?'<span class="tag">PALING DIPILIH</span>':''}
-    <div><h3>${p.nama}</h3><p class="muted" style="font-size:14px;margin-top:6px">${p.desc}</p></div>
-    <div class="price">${rp(TIPE[1].harga+p.tambah)}<small> / ekor${p.box?' + box':''}</small></div>
-    <ul>${p.feat.map(f=>`<li>${chk}${f}</li>`).join('')}</ul>
-    <button class="btn btn-primary" data-go="pesan" data-paket="${p.id}">Pilih ${p.nama}</button>
+  <article class="paket">
+    <div><h3>${p.nama}</h3>${p.desc?`<p class="muted" style="font-size:14px;margin-top:6px">${p.desc}</p>`:''}</div>
+    <div class="price">${p.hBox?rp(p.hBox)+'<small> / box</small>':rp(p.hMasak)+'<small> / ekor</small>'}</div>
+    <button class="btn btn-ghost" data-go="pesan" data-paket="${p.id}">Pilih ${p.nama}</button>
   </article>`).join('');
-$('#tipeBody').innerHTML=TIPE.map(t=>`<tr><td><b>Tipe ${t.k}</b></td><td class="num">${t.w}</td><td class="muted">${t.hasil}</td><td class="r num">${rp(t.harga)}</td><td class="r">${t.stok<6?`<span class="pill s-batal">Sisa ${t.stok}</span>`:`<span class="pill s-selesai">${t.stok} ekor</span>`}</td></tr>`).join('');
+$('#tipeBody').innerHTML=TKM.map(t=>`<tr><td><b>${t.n}</b></td><td class="muted">${t.d}</td><td class="r num">${rp(t.harga)}</td><td class="r"><span class="pill s-selesai">${t.stok} ekor</span></td></tr>`).join('');
 
-/* ---------- wizard ---------- */
-const W={step:0,jk:'L',anak:'Muhammad Al-Fatih',ortu:'Rizky Pratama',lahir:'2026-09-24',ekor:2,tipe:'C',paket:'saji',menu:'sg',box:100,tglAcara:'2026-10-01',jam:'11:00',zona:'jabo',alamat:'Jl. Kayu Manis IV No. 18, RT 05/RW 02, Matraman, Jakarta Timur',wa:'0812-3456-4410',bayar:'dp',metode:'bca',done:false};
-const STEPS=['Data anak','Kambing & paket','Jadwal & alamat','Pembayaran'];
+/* ---------- wizard (field = form.php) ---------- */
+const W={step:0,jkel:'laki-laki',namaydiqiqahkan:'Muhammad Al-Fatih',lahirdi:'Tangerang',tgllahir:'2026-09-24',anakke:'1',ayah:'Rizky Pratama',ibu:'Nurul Aini',
+  tkm:'jantan',jkm:2,nbx:'PaketKebuliBasmati',typbox:'Box',jbx:100,keterangan:'',
+  tglantar:'2026-09-30',jamdilokasi:'11:00',zona:'jabo',alamatantar:'Jl. Kayu Manis IV No. 18, RT 05/RW 02, Karawaci, Kota Tangerang',kdpos:'15115',
+  namapemesan:'Rizky Pratama',telppemesan:'0812 3456 4410',emailpemesan:'rizky.pratama@email.com',bayar:'dp',bank:'bca',done:false};
+const STEPS=['Yang diaqiqahkan','Kambing & box','Antar & pemesan','Pembayaran'];
+const esc=s=>String(s??'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
 function calc(){
-  const t=TIPE.find(x=>x.k===W.tipe),p=PAKET.find(x=>x.id===W.paket),m=MENU.find(x=>x.id===W.menu);
-  const kambing=t.harga*W.ekor, masak=p.tambah*W.ekor, menu=p.id==='potong'?0:m.p, box=p.box?W.box*BOX_PRICE:0, ongkir=ONGKIR[W.zona];
-  const total=kambing+masak+menu+box+ongkir;
-  return {t,p,m,kambing,masak,menu,box,ongkir,total,dp:Math.ceil(total/2/1000)*1000};
+  const t=TKM.find(x=>x.k===W.tkm),p=PAKET.find(x=>x.id===W.nbx);
+  const kambing=t.harga*W.jkm, masak=p.hMasak*W.jkm, box=p.hBox*W.jbx, ongkir=ONGKIR[W.zona];
+  const total=kambing+masak+box+ongkir;
+  return {t,p,kambing,masak,box,ongkir,total,dp:Math.ceil(total/2/1000)*1000};
 }
-function hari(lahir,acara){const d=(new Date(acara)-new Date(lahir))/864e5+1;return Math.round(d)}
+function hari(lahir,acara){return Math.round((new Date(acara)-new Date(lahir))/864e5+1)}
 function fmtDate(s){return new Date(s+'T00:00').toLocaleDateString('id-ID',{weekday:'long',day:'numeric',month:'long',year:'numeric'})}
 function renderStepper(){
   $('#stepper').innerHTML=STEPS.map((s,i)=>`<button type="button" class="${i<W.step?'done':''} ${i===W.step?'cur':''}" data-step="${i}" ${i>W.step?'disabled':''}><span class="bar"><i></i></span><span>${i+1}. ${s}</span></button>`).join('');
@@ -733,95 +735,105 @@ function renderStepper(){
 }
 function choice(name,val,cur,title,sub,price){
   const id=name+'-'+val;
-  return `<div class="choice"><input type="radio" name="${name}" id="${id}" value="${val}" ${cur===val?'checked':''}><label for="${id}"><b>${title}</b>${sub?`<small>${sub}</small>`:''}${price?`<span class="p">${price}</span>`:''}</label></div>`;
+  return `<div class="choice"><input type="radio" name="${name}" id="${id}" value="${val}" ${String(cur)===String(val)?'checked':''}><label for="${id}"><b>${title}</b>${sub?`<small>${sub}</small>`:''}${price?`<span class="p">${price}</span>`:''}</label></div>`;
 }
+const inp=(name,lab,attrs='',hint='')=>`<div class="field"><label for="f-${name}">${lab}</label><input class="input" id="f-${name}" name="${name}" value="${esc(W[name])}" ${attrs}>${hint?`<span class="hint">${hint}</span>`:''}</div>`;
 function renderWizard(){
   renderStepper();
   const f=$('#wizard');const c=calc();
   if(W.done){
     f.innerHTML=`<div class="success"><span class="check"><svg width="30" height="30"><use href="#i-check"/></svg></span>
       <h2>Pesanan diterima</h2><p class="muted">Nomor pesanan Anda</p><p class="mono" style="font-size:22px;font-weight:600">HA-2610-0144</p>
-      <p class="muted" style="max-width:46ch">Invoice dan instruksi pembayaran sudah dikirim ke WhatsApp <span class="mono">${W.wa}</span>. Pembayaran terverifikasi otomatis dalam 5 menit.</p>
+      <p class="muted" style="max-width:46ch">Invoice dan instruksi pembayaran dikirim ke <span class="mono">${esc(W.telppemesan)}</span> dan ${esc(W.emailpemesan)}.</p>
       <div class="hero-cta" style="justify-content:center"><button type="button" class="btn btn-primary" data-go="lacak">Lacak pesanan</button><button type="button" class="btn btn-ghost" id="againBtn">Buat pesanan lain</button></div></div>`;
     $('#againBtn').onclick=()=>{W.done=false;W.step=0;renderWizard()};
     renderSummary(c);return;
   }
   let h='';
   if(W.step===0){
-    h=`<div><p class="eyebrow">Langkah 1 dari 4</p><h2 style="margin-top:6px">Data buah hati</h2></div>
-    <div class="field"><label>Jenis kelamin</label><div class="choice-grid">${choice('jk','L',W.jk,'Laki-laki','Sunnah 2 ekor')}${choice('jk','P',W.jk,'Perempuan','Sunnah 1 ekor')}</div></div>
+    h=`<div><p class="eyebrow">Langkah 1 dari 4</p><h2 style="margin-top:6px">Yang diaqiqahkan</h2></div>
+    <div class="field"><label>Jenis kelamin</label><div class="choice-grid">${choice('jkel','laki-laki',W.jkel,'Laki-laki','Sunnah 2 ekor')}${choice('jkel','perempuan',W.jkel,'Perempuan','Sunnah 1 ekor')}</div></div>
     <div class="grid-2">
-      <div class="field"><label for="f-anak">Nama lengkap anak</label><input class="input" id="f-anak" name="anak" value="${W.anak}" required><span class="hint">Dibacakan saat penyembelihan &amp; dicetak di sertifikat.</span></div>
-      <div class="field"><label for="f-ortu">Nama ayah</label><input class="input" id="f-ortu" name="ortu" value="${W.ortu}" required><span class="hint">Untuk penulisan "bin/binti".</span></div>
-      <div class="field"><label for="f-lahir">Tanggal lahir</label><input class="input" type="date" id="f-lahir" name="lahir" value="${W.lahir}"></div>
-      <div class="field"><label for="f-wa">Nomor WhatsApp</label><input class="input mono" id="f-wa" name="wa" value="${W.wa}" inputmode="tel"><span class="hint">Video, invoice dan status dikirim ke nomor ini.</span></div>
+      ${inp('namaydiqiqahkan','Nama yang diaqiqahkan','maxlength="25" required','Maks. 25 huruf. Dicetak di sertifikat.')}
+      ${inp('lahirdi','Lahir di','required')}
+      ${inp('tgllahir','Tanggal lahir','type="date" required')}
+      <div class="field"><label for="f-anakke">Anak ke</label><select class="input" id="f-anakke" name="anakke">${[1,2,3,4,5,6,7,8,9,10].map(n=>`<option ${String(n)===String(W.anakke)?'selected':''}>${n}</option>`).join('')}</select></div>
+      ${inp('ayah','Ayah','required','Untuk penulisan bin/binti.')}
+      ${inp('ibu','Ibu','required')}
     </div>`;
   } else if(W.step===1){
-    h=`<div><p class="eyebrow">Langkah 2 dari 4</p><h2 style="margin-top:6px">Kambing &amp; paket</h2></div>
-    <div class="field"><label>Tipe kambing</label><div class="choice-grid">${TIPE.map(t=>choice('tipe',t.k,W.tipe,'Tipe '+t.k,t.w,rp(t.harga))).join('')}</div></div>
-    <div class="field"><label>Jumlah ekor</label><div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap"><div class="stepper-num"><button type="button" id="ekMin" aria-label="Kurangi">−</button><output id="ekOut" class="num">${W.ekor}</output><button type="button" id="ekPlus" aria-label="Tambah">+</button></div>
-      <span class="hint" style="font-size:13px">${W.jk==='L'?'Anak laki-laki disunnahkan 2 ekor.':'Anak perempuan disunnahkan 1 ekor.'}</span></div></div>
-    <div class="field"><label>Paket penyajian</label><div class="choice-grid">${PAKET.map(p=>choice('paket',p.id,W.paket,p.nama,p.desc,p.tambah?'+'+rp(p.tambah)+'/ekor':'Tanpa biaya masak')).join('')}</div></div>
-    ${W.paket!=='potong'?`<div class="field"><label>Menu masakan</label><div class="choice-grid">${MENU.map(m=>choice('menu',m.id,W.menu,m.n,'',m.p?'+'+rp(m.p):'Termasuk')).join('')}</div></div>`:''}
-    ${W.paket==='box'?`<div class="field"><label for="f-box">Jumlah nasi box</label><input class="input num" type="number" min="20" step="10" id="f-box" name="box" value="${W.box}" style="max-width:180px"><span class="hint">${rp(BOX_PRICE)} per box. Rekomendasi untuk ${W.ekor} ekor tipe ${W.tipe}: ${W.ekor*({A:40,B:50,C:60,D:70,Super:85}[W.tipe])} box.</span></div>`:''}`;
+    h=`<div><p class="eyebrow">Langkah 2 dari 4</p><h2 style="margin-top:6px">Kambing &amp; box</h2></div>
+    <div class="field"><label>Kambing</label><div class="choice-grid">${TKM.map(t=>choice('tkm',t.k,W.tkm,t.n,t.d,rp(t.harga))).join('')}</div></div>
+    <div class="field"><label>Jumlah kambing</label><div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap"><div class="stepper-num"><button type="button" id="ekMin" aria-label="Kurangi">−</button><output id="ekOut" class="num">${W.jkm}</output><button type="button" id="ekPlus" aria-label="Tambah">+</button></div>
+      <span class="hint" style="font-size:13px">${W.jkel==='laki-laki'?'Anak laki-laki disunnahkan 2 ekor.':'Anak perempuan disunnahkan 1 ekor.'} Maks. 8.</span></div></div>
+    <div class="field"><label>Nama box</label><div class="choice-grid">${PAKET.map(p=>choice('nbx',p.id,W.nbx,p.nama,p.desc,p.hBox?rp(p.hBox)+'/box':'+'+rp(p.hMasak)+'/ekor')).join('')}</div></div>
+    <div class="field"><label>Tipe box</label><div class="choice-grid">${TYPBOX.map(t=>choice('typbox',t,W.typbox,t)).join('')}</div></div>
+    <div class="field"><label>Jumlah box</label><div class="choice-grid" style="grid-template-columns:repeat(auto-fill,minmax(72px,1fr))">${JBX.map(n=>choice('jbx',n,W.jbx,String(n))).join('')}</div></div>
+    <div class="field"><label for="f-keterangan">Keterangan</label><textarea class="input" id="f-keterangan" name="keterangan" maxlength="550" placeholder="cth. sambal dipisah, acara di masjid">${esc(W.keterangan)}</textarea></div>`;
   } else if(W.step===2){
-    const hr=hari(W.lahir,W.tglAcara);
-    h=`<div><p class="eyebrow">Langkah 3 dari 4</p><h2 style="margin-top:6px">Jadwal &amp; alamat antar</h2></div>
+    const hr=hari(W.tgllahir,W.tglantar);
+    h=`<div><p class="eyebrow">Langkah 3 dari 4</p><h2 style="margin-top:6px">Pengantaran &amp; pemesan</h2></div>
     <div class="grid-2">
-      <div class="field"><label for="f-tgl">Tanggal acara</label><input class="input" type="date" id="f-tgl" name="tglAcara" value="${W.tglAcara}"></div>
-      <div class="field"><label for="f-jam">Jam tiba masakan</label><select class="input" id="f-jam" name="jam">${['09:00','10:00','11:00','13:00','15:00','16:00'].map(j=>`<option ${j===W.jam?'selected':''}>${j}</option>`).join('')}</select></div>
+      ${inp('tglantar','Tanggal antar','type="date" required')}
+      ${inp('jamdilokasi','Jam di lokasi','type="time" required')}
     </div>
-    <div class="note"><svg width="18" height="18"><use href="#i-info"/></svg><span>${fmtDate(W.tglAcara)} adalah <b>hari ke-${hr}</b> sejak kelahiran${[7,14,21].includes(hr)?', sesuai waktu yang dianjurkan.':'. Waktu yang dianjurkan adalah hari ke-7, 14 atau 21.'} Penyembelihan dilakukan pukul 06.00–08.00 pada hari yang sama.</span></div>
-    <div class="field"><label>Wilayah pengantaran</label><div class="choice-grid">${choice('zona','jabo',W.zona,'Jabodetabek','','Gratis ongkir')}${choice('zona','bdg',W.zona,'Bandung Raya','',rp(ONGKIR.bdg))}${choice('zona','ambil',W.zona,'Ambil di dapur','Tangerang','Gratis')}</div></div>
-    ${W.zona!=='ambil'?`<div class="field"><label for="f-alamat">Alamat lengkap</label><textarea class="input" id="f-alamat" name="alamat">${W.alamat}</textarea><span class="hint">Sertakan patokan agar kurir mudah menemukan lokasi.</span></div>`:''}`;
+    <div class="note"><svg width="18" height="18"><use href="#i-info"/></svg><span>${fmtDate(W.tglantar)} adalah <b>hari ke-${hr}</b> sejak kelahiran${[7,14,21].includes(hr)?', sesuai waktu yang dianjurkan.':'. Waktu yang dianjurkan adalah hari ke-7, 14 atau 21.'}</span></div>
+    <div class="field"><label>Wilayah</label><div class="choice-grid">${choice('zona','jabo',W.zona,'Jabodetabek','','Ongkir contoh: gratis')}${choice('zona','luar',W.zona,'Luar Jabodetabek','',rp(ONGKIR.luar))}</div></div>
+    <div class="field"><label for="f-alamatantar">Alamat antar</label><textarea class="input" id="f-alamatantar" name="alamatantar" maxlength="1000">${esc(W.alamatantar)}</textarea><span class="hint">Sertakan patokan agar kurir mudah menemukan lokasi.</span></div>
+    <div class="grid-2">
+      ${inp('kdpos','Kode pos','inputmode="numeric" maxlength="5"')}
+      ${inp('namapemesan','Nama pemesan','required autocomplete="name"')}
+      ${inp('telppemesan','Telepon pemesan','type="tel" inputmode="tel" required','Invoice dan status dikirim ke nomor ini.')}
+      ${inp('emailpemesan','Email pemesan','type="email" required')}
+    </div>`;
   } else {
     h=`<div><p class="eyebrow">Langkah 4 dari 4</p><h2 style="margin-top:6px">Pembayaran</h2></div>
-    <div class="field"><label>Skema pembayaran</label><div class="choice-grid">${choice('bayar','dp',W.bayar,'DP 50%',`Sisa dibayar H-1`,rp(c.dp))}${choice('bayar','lunas',W.bayar,'Lunas sekarang','Prioritas pilih kambing',rp(c.total))}</div></div>
-    <div class="field"><label>Metode</label><div class="choice-grid">${choice('metode','bca',W.metode,'Transfer BCA','Virtual account')}${choice('metode','bsi',W.metode,'Transfer BSI','Bank syariah')}${choice('metode','qris',W.metode,'QRIS','Semua e-wallet')}</div></div>
-    <div class="bank"><span class="logo-b">${W.metode.toUpperCase()}</span><div><small class="muted">${W.metode==='qris'?'Kode QRIS muncul setelah konfirmasi':'Nomor virtual account'}</small><div class="mono" style="font-weight:600">${W.metode==='qris'?'—':W.metode==='bca'?'3901 0812 3456 4410':'7008 0812 3456 4410'}</div></div>${W.metode!=='qris'?'<button type="button" class="btn btn-ghost btn-sm copy" id="copyVa">Salin</button>':''}</div>
-    <label style="display:flex;gap:10px;font-size:13.5px;align-items:flex-start"><input type="checkbox" id="f-setuju" checked style="margin-top:4px">Saya setuju daging aqiqah dibagikan sesuai syariat dan menyetujui ketentuan layanan Habib Aqiqah.</label>`;
+    <div class="field"><label>Skema pembayaran</label><div class="choice-grid">${choice('bayar','dp',W.bayar,'DP 50%','Sisa dibayar H-1',rp(c.dp))}${choice('bayar','lunas',W.bayar,'Lunas sekarang','',rp(c.total))}</div></div>
+    <div class="field"><label>Bank tujuan transfer</label><div class="choice-grid" style="grid-template-columns:repeat(auto-fill,minmax(110px,1fr))">${BANK.map(([k,n])=>choice('bank',k,W.bank,n)).join('')}</div></div>
+    <div class="note"><svg width="18" height="18"><use href="#i-info"/></svg><span>Nomor rekening ${bankName(W.bank)} Habib Aqiqah dikirim bersama invoice setelah pesanan dikonfirmasi.</span></div>
+    <label style="display:flex;gap:10px;font-size:13.5px;align-items:flex-start"><input type="checkbox" id="f-setuju" checked style="margin-top:4px">Saya menyetujui ketentuan layanan Habib Aqiqah.</label>`;
   }
   h+=`<div class="wizard-nav"><button type="button" class="btn btn-ghost" id="prevBtn" ${W.step===0?'disabled':''}>Kembali</button><button type="submit" class="btn btn-primary">${W.step===3?'Konfirmasi &amp; bayar '+rp(W.bayar==='dp'?c.dp:c.total):'Lanjut'}</button></div>`;
   f.innerHTML=h;
-  if($('#ekMin')){$('#ekMin').onclick=()=>{W.ekor=Math.max(1,W.ekor-1);renderWizard()};$('#ekPlus').onclick=()=>{W.ekor=Math.min(10,W.ekor+1);renderWizard()}}
-  if($('#copyVa'))$('#copyVa').onclick=()=>{const v=f.querySelector('.bank .mono').textContent;(navigator.clipboard?navigator.clipboard.writeText(v):Promise.reject()).then(()=>toast('Nomor VA disalin')).catch(()=>toast('Nomor VA: '+v))};
+  if($('#ekMin')){$('#ekMin').onclick=()=>{W.jkm=Math.max(1,W.jkm-1);renderWizard()};$('#ekPlus').onclick=()=>{W.jkm=Math.min(8,W.jkm+1);renderWizard()}}
   $('#prevBtn').onclick=()=>{W.step=Math.max(0,W.step-1);renderWizard()};
   renderSummary(c);
 }
 $('#wizard').addEventListener('change',e=>{
   const el=e.target;if(!el.name)return;
-  W[el.name]=el.type==='number'?Math.max(0,+el.value||0):el.value;
-  if(el.name==='jk')W.ekor=el.value==='L'?2:1;
-  if(['jk','tipe','paket','zona','bayar','metode','menu'].includes(el.name))renderWizard();else renderSummary(calc());
+  W[el.name]=el.name==='jbx'?+el.value:el.value;
+  if(el.name==='jkel')W.jkm=el.value==='laki-laki'?2:1;
+  if(el.type==='radio'||el.type==='date')renderWizard();else renderSummary(calc());
 });
-$('#wizard').addEventListener('input',e=>{const el=e.target;if(el.name&&el.type!=='radio'){W[el.name]=el.type==='number'?Math.max(0,+el.value||0):el.value;renderSummary(calc())}});
+$('#wizard').addEventListener('input',e=>{const el=e.target;if(el.name&&el.type!=='radio'){W[el.name]=el.value;renderSummary(calc())}});
 $('#wizard').addEventListener('submit',e=>{
   e.preventDefault();
-  if(W.step===0&&!W.anak.trim()){toast('Isi nama lengkap anak terlebih dahulu');$('#f-anak').focus();return}
+  const bad=[...$('#wizard').querySelectorAll('[required]')].find(el=>!el.value.trim());
+  if(bad){toast('Lengkapi '+bad.closest('.field').querySelector('label').textContent.toLowerCase()+' dulu.');bad.focus();return}
   if(W.step===3){if(!$('#f-setuju').checked){toast('Centang persetujuan untuk melanjutkan');return}W.done=true;renderWizard();toast('Pesanan HA-2610-0144 dibuat');return}
   W.step++;renderWizard();$('#stepper').scrollIntoView({behavior:'smooth',block:'nearest'});
 });
 function renderSummary(c){
-  $('#sumTitle').textContent='Aqiqah '+(W.anak||'—');
+  $('#sumTitle').textContent='Aqiqah '+(W.namaydiqiqahkan||'—');
   const L=(a,b)=>`<div class="line"><span>${a}</span><span class="num">${b}</span></div>`;
   $('#sumBody').innerHTML=
-    L(`${W.ekor} × kambing tipe ${W.tipe}`,rp(c.kambing))+
-    (c.masak?L(`Masak ${c.p.nama} × ${W.ekor}`,rp(c.masak)):'')+
-    (W.paket!=='potong'?L(`Menu: ${c.m.n}`,c.menu?rp(c.menu):'Termasuk'):'')+
-    (c.box?L(`${W.box} nasi box`,rp(c.box)):'')+
-    L('Ongkos kirim',c.ongkir?rp(c.ongkir):'Gratis')+
+    L(`${W.jkm} × kambing ${W.tkm}`,rp(c.kambing))+
+    (c.masak?L(`Masak saja × ${W.jkm}`,rp(c.masak)):'')+
+    (c.box?L(`${W.jbx} ${W.typbox.toLowerCase()} · ${c.p.nama}`,rp(c.box)):'')+
+    L('Ongkir',c.ongkir?rp(c.ongkir):'Gratis')+
     `<div class="line total"><span>Total</span><span class="num">${rp(c.total)}</span></div>`+
     L(W.bayar==='dp'?'Bayar sekarang (DP 50%)':'Bayar sekarang',rp(W.bayar==='dp'?c.dp:c.total))+
-    `<div class="note" style="margin-top:6px"><svg width="18" height="18"><use href="#i-cal"/></svg><span>${fmtDate(W.tglAcara)}, tiba pukul ${W.jam} WIB</span></div>`;
+    `<p class="muted" style="font-size:12px">Harga contoh. Ganti dengan daftar harga asli.</p>`+
+    `<div class="note" style="margin-top:6px"><svg width="18" height="18"><use href="#i-cal"/></svg><span>${fmtDate(W.tglantar)}, tiba pukul ${W.jamdilokasi} WIB</span></div>`;
 }
 
 /* ---------- tracking ---------- */
 const TL=[
-  {s:'done',t:'Pesanan dikonfirmasi',d:'Pembayaran lunas via BCA virtual account.',w:'26 Sep, 20.14'},
-  {s:'done',t:'Kambing dipilih & dikunci',d:'2 ekor tipe C, bobot 29,4 kg dan 30,1 kg. Foto dikirim ke WhatsApp.',w:'27 Sep, 09.30'},
+  {s:'done',t:'Pesanan dikonfirmasi',d:'Pembayaran lunas via transfer BCA.',w:'26 Sep, 20.14'},
+  {s:'done',t:'Kambing dipilih & dikunci',d:'2 ekor jantan dari dapur Own. Foto dikirim ke WhatsApp.',w:'27 Sep, 09.30'},
   {s:'done',t:'Disembelih',d:'Oleh Ust. Ahmad Syukri (juru sembelih halal bersertifikat). Nama ananda dibacakan.',w:'1 Okt, 07.42'},
-  {s:'now',t:'Dimasak',d:'Sate dan gule sedang dimasak di dapur Tangerang.',w:'1 Okt, 08.30'},
-  {s:'',t:'Diantar',d:'Perkiraan berangkat 10.45, tiba 11.30 WIB.',w:'—'},
+  {s:'now',t:'Dimasak',d:'Paket Kebuli Basmati sedang dimasak, 100 box.',w:'1 Okt, 08.30'},
+  {s:'',t:'Diantar',d:'Courier Joko berangkat 09.30, di lokasi 11.00 WIB.',w:'—'},
   {s:'',t:'Selesai',d:'Sertifikat dan foto acara tersimpan di riwayat pesanan.',w:'—'},
 ];
 const ICON={0:'i-receipt',1:'i-goat',2:'i-knife',3:'i-pot',4:'i-truck',5:'i-check'};
@@ -840,7 +852,7 @@ function renderKpis(){
   const K=[
     {l:'Pesanan Oktober',v:'47',d:'+18% vs Sep (pro-rata)',up:1,s:[22,25,24,30,28,33,35,31,38,41,44,47]},
     {l:'Omzet bulan berjalan',v:'Rp 238 jt',d:'+12% vs Sep',up:1,s:[150,162,170,168,181,190,201,198,212,220,231,238]},
-    {l:'Kambing tersedia',v:'60 ekor',d:'4 ekor tipe A tersisa',up:0,s:[95,90,88,84,80,78,76,72,70,66,63,60]},
+    {l:'Kambing tersedia',v:'60 ekor',d:'34 jantan · 26 betina',up:0,s:[95,90,88,84,80,78,76,72,70,66,63,60]},
     {l:'Piutang DP',v:'Rp 10,1 jt',d:'3 pesanan menunggu pelunasan',up:0,s:[4,6,5,8,7,9,8,11,10,12,11,10]},
   ];
   $('#kpis').innerHTML=K.map(k=>`<div class="kpi"><span class="eyebrow">${k.l}</span><span class="v">${k.v}</span><span class="d ${k.up?'up':'down'}">${k.d}</span>${spark(k.s,k.up?'var(--brand)':'var(--gold)')}</div>`).join('');
@@ -866,21 +878,21 @@ const WKV=[14,17,15,19,22,18,21,24,20,23,26,29];
 
 function renderToday(){
   const A=[
-    {t:'06.00',k:'potong',a:'Potong 2 ekor tipe C',b:'HA-2610-0142 · Al-Fatih'},
-    {t:'06.30',k:'potong',a:'Potong 1 ekor tipe B',b:'HA-2610-0141 · Aisyah Humaira'},
-    {t:'09.00',k:'masak',a:'Packing 60 nasi box',b:'HA-2610-0141 · Bekasi'},
-    {t:'10.00',k:'kirim',a:'Antar ke Bekasi Utara',b:'Kurir Andi · B 4412 KZA'},
-    {t:'10.45',k:'kirim',a:'Antar ke Matraman',b:'Kurir Dedi · B 9123 KXT'},
+    {t:'06.00',k:'potong',a:'Potong 2 ekor jantan',b:'HA-2610-0142 · Al-Fatih · dapur Own'},
+    {t:'06.30',k:'potong',a:'Potong 1 ekor betina',b:'HA-2610-0141 · Aisyah Humaira · dapur Own'},
+    {t:'08.30',k:'masak',a:'Packing 60 bento Paket Hemat',b:'HA-2610-0141 · CS Alimah'},
+    {t:'09.15',k:'kirim',a:'Berangkat ke Bekasi Utara',b:'Courier Lalamove · tiba 10.30'},
+    {t:'09.30',k:'kirim',a:'Berangkat ke Karawaci',b:'Courier Joko · tiba 11.00'},
   ];
   const pill={potong:'s-potong">Potong',masak:'s-lunas">Masak',kirim:'s-kirim">Kirim'};
   $('#todayList').innerHTML=A.map(x=>`<div><time>${x.t}</time><span style="min-width:0"><b>${x.a}</b><small>${x.b}</small></span><span class="pill ${pill[x.k]}</span></div>`).join('');
 }
 function orderRow(o,full){
   const pct=Math.round(o.bayar/o.total*100);
+  const pk=`${paketName(o.paket)}<small class="muted" style="display:block">${o.box} ${o.typbox?o.typbox.toLowerCase():'box'}</small>`;
   return `<tr data-id="${o.id}" tabindex="0"><td class="mono">${o.id}</td><td class="who"><b>${o.anak}</b><small>${o.jk==='L'?'bin':'binti'} ${o.ortu}</small></td>
-  ${full?`<td>${o.ekor} × tipe ${o.tipe}</td>`:`<td>${o.tgl} · ${o.kota}</td>`}
-  <td>${paketName(o.paket)}${o.box?` <small class="muted">(${o.box} box)</small>`:''}</td>
-  ${full?`<td>${o.tgl} · ${o.kota}</td><td><span class="paybar"><i style="width:${pct}%"></i></span><small class="num">${pct}%</small></td>`:''}
+  ${full?`<td>${o.ekor} ${o.tkm}</td><td>${pk}</td><td class="who"><b>${o.tgl} · ${o.jam}</b><small>${o.kota}</small></td><td class="who"><b>${DAPUR[o.dapur]}</b><small>CS ${CS[o.cs]} · ${COURIER[o.courier]||'—'}</small></td><td><span class="paybar"><i style="width:${pct}%"></i></span><small class="num">${pct}%</small></td>`
+       :`<td>${o.tgl} · ${o.kota}</td><td>${pk}</td>`}
   <td class="r num">${rp(o.total)}</td><td><span class="pill s-${o.status}">${sName(o.status)}</span></td></tr>`;
 }
 function renderAction(){
@@ -889,8 +901,8 @@ function renderAction(){
 let filt='semua';
 function renderOrders(){
   const q=($('#q').value||'').toLowerCase();
-  const list=ORDERS.filter(o=>(filt==='semua'||o.status===filt)&&(!q||(o.id+o.anak+o.ortu+o.kota).toLowerCase().includes(q)));
-  $('#orderBody').innerHTML=list.length?list.map(o=>orderRow(o,true)).join(''):`<tr><td colspan="8" class="muted" style="text-align:center;padding:30px">Tidak ada pesanan yang cocok dengan "${q}".</td></tr>`;
+  const list=ORDERS.filter(o=>(filt==='semua'||o.status===filt)&&(!q||(o.id+o.anak+o.ortu+o.kota+o.cs+o.courier+o.dapur+paketName(o.paket)).toLowerCase().includes(q)));
+  $('#orderBody').innerHTML=list.length?list.map(o=>orderRow(o,true)).join(''):`<tr><td colspan="9" class="muted" style="text-align:center;padding:30px">Tidak ada pesanan yang cocok dengan "${q}".</td></tr>`;
   $('#orderCountLbl').textContent=`${list.length} dari ${ORDERS.length} pesanan · Oktober 2026`;
   const counts={semua:ORDERS.length};ORDERS.forEach(o=>counts[o.status]=(counts[o.status]||0)+1);
   $('#statusChips').innerHTML=[{k:'semua',n:'Semua'},...STATUS].map(s=>`<button data-f="${s.k}" aria-pressed="${filt===s.k}">${s.n} <span class="num">${counts[s.k]||0}</span></button>`).join('');
@@ -907,7 +919,7 @@ function openDrawer(id){
   $('#drawer').innerHTML=`<div class="drawer-h"><div><p class="eyebrow mono">${o.id}</p><h3 style="font-size:22px;margin-top:4px">${o.anak}</h3><p class="muted" style="font-size:13.5px">${o.jk==='L'?'bin':'binti'} ${o.ortu} · ${o.kota}</p></div><button class="icon-btn" id="closeDr" aria-label="Tutup"><svg width="16" height="16"><use href="#i-x"/></svg></button></div>
   <div class="drawer-b">
     <div><p class="eyebrow" style="margin-bottom:8px">Ubah status</p><div class="flow">${STATUS.map((s,i)=>`<button data-st="${s.k}" class="${i<=si?'on':''}">${s.n}</button>`).join('')}</div></div>
-    <dl class="kv"><dt>Kambing</dt><dd>${o.ekor} ekor · tipe ${o.tipe} (${TIPE.find(t=>t.k===o.tipe).w})</dd><dt>Paket</dt><dd>${paketName(o.paket)}${o.box?' · '+o.box+' nasi box':''}</dd><dt>Menu</dt><dd>${o.menu}</dd><dt>Tanggal acara</dt><dd>${o.tgl} 2026 · tiba 11.00</dd><dt>WhatsApp</dt><dd class="mono">${o.wa}</dd></dl>
+    <dl class="kv"><dt>Lahir</dt><dd>${o.lahirdi} · anak ke-${o.anakke}</dd><dt>Ibu</dt><dd>${o.ibu}</dd><dt>Kambing (Tkm)</dt><dd>${o.ekor} ekor ${o.tkm}</dd><dt>Nama box</dt><dd>${paketName(o.paket)}</dd><dt>Box</dt><dd>${o.box} · ${o.typbox||'—'}</dd><dt>Antar</dt><dd>${o.tgl} 2026 · berangkat ${o.brgkt} · di lokasi ${o.jam}</dd><dt>Alamat</dt><dd>${o.kota} · <span class="mono">${o.kdpos}</span></dd><dt>Telepon</dt><dd class="mono">${o.wa}</dd><dt>Dapur</dt><dd>${DAPUR[o.dapur]}</dd><dt>CS / Courier</dt><dd>${CS[o.cs]} · ${COURIER[o.courier]||'—'}</dd><dt>Agen</dt><dd>${AGEN[o.agen]||'—'}</dd><dt>Bank</dt><dd>${o.bank?bankName(o.bank):'—'}</dd></dl>
     <div class="card" style="padding:14px;display:grid;gap:8px"><div class="line"><span>Total</span><span class="num">${rp(o.total)}</span></div><div class="line"><span>Sudah dibayar</span><span class="num">${rp(o.bayar)}</span></div><div class="line total"><span>Sisa tagihan</span><span class="num" style="color:${sisa?'var(--bad)':'var(--ok)'}">${sisa?rp(sisa):'Lunas'}</span></div></div>
     <div><p class="eyebrow" style="margin-bottom:8px">Catatan internal</p><textarea class="input" id="note-${o.id}" placeholder="Contoh: minta sate tanpa lemak, acara di masjid">${o.id==='HA-2610-0140'?'Minta kambing dikirim foto dulu sebelum potong.':''}</textarea></div>
   </div>
@@ -925,22 +937,22 @@ $('#newOrderBtn').onclick=()=>{setMode('cust');custView('pesan');W.step=0;W.done
 /* jadwal */
 function renderWeek(){
   const D=[
-    {d:28,n:'Sen',s:[['potong','06.00','Potong 1 · tipe B','HA-2609-0131'],['kirim','11.00','Antar Cibinong','HA-2609-0131']]},
-    {d:29,n:'Sel',s:[['potong','06.00','Potong 1 · tipe C','HA-2609-0133'],['masak','08.30','50 nasi box','HA-2609-0133'],['kirim','11.00','Antar Depok','HA-2609-0133']]},
-    {d:30,n:'Rab',s:[['potong','06.00','Potong 2 · tipe B','HA-2609-0134'],['kirim','10.30','Antar Bekasi','HA-2609-0134']]},
-    {d:1,n:'Kam',today:1,s:[['potong','06.00','Potong 2 · tipe C','Al-Fatih'],['potong','06.30','Potong 1 · tipe B','Aisyah'],['masak','09.00','60 nasi box','Aisyah'],['kirim','10.00','Antar Bekasi Utara','Aisyah'],['kirim','10.45','Antar Matraman','Al-Fatih']]},
-    {d:2,n:'Jum',s:[['potong','05.45','Potong 2 · tipe D','Umar'],['potong','06.30','Potong 1 · tipe A','Zahra'],['masak','08.00','120 nasi box','Umar'],['kirim','10.30','Antar Depok','Umar']]},
-    {d:3,n:'Sab',s:[['potong','06.00','Potong 2 · tipe B','Hafiz'],['potong','06.30','Potong 1 · Super','Khadijah'],['masak','07.30','Kambing guling','Khadijah'],['kirim','11.00','Antar Tangerang','Hafiz'],['kirim','12.00','Antar Bogor','Khadijah']]},
-    {d:4,n:'Min',s:[['potong','05.30','Potong 2 · tipe C','Ibrahim'],['potong','06.15','Potong 1 · tipe B','Naura'],['kirim','08.00','Berangkat ke Bandung','Ibrahim'],['kirim','11.00','Antar Jakarta Barat','Naura']]},
+    {d:28,n:'Sen',s:[['potong','06.00','Potong 1 · betina','HA-2609-0131'],['kirim','11.00','Antar Cibinong','HA-2609-0131']]},
+    {d:29,n:'Sel',s:[['potong','06.00','Potong 1 · betina','HA-2609-0133'],['masak','08.30','50 box Paket Istimewa','HA-2609-0133'],['kirim','11.00','Antar Depok','HA-2609-0133']]},
+    {d:30,n:'Rab',s:[['potong','06.00','Potong 2 · jantan','HA-2609-0134'],['kirim','10.30','Antar Bekasi','HA-2609-0134']]},
+    {d:1,n:'Kam',today:1,s:[['potong','06.00','Potong 2 · jantan','Al-Fatih'],['potong','06.30','Potong 1 · betina','Aisyah'],['masak','09.00','60 bento Paket Hemat','Aisyah'],['kirim','10.00','Antar Bekasi Utara','Aisyah'],['kirim','10.45','Antar Matraman','Al-Fatih']]},
+    {d:2,n:'Jum',s:[['potong','05.45','Potong 2 · jantan','Umar'],['potong','06.30','Potong 1 · betina','Zahra'],['masak','08.00','120 box Paket Lux','Umar'],['kirim','10.30','Antar Depok','Umar']]},
+    {d:3,n:'Sab',s:[['potong','06.00','Potong 2 · jantan','Hafiz'],['potong','06.30','Potong 1 · betina','Khadijah'],['masak','07.30','70 grongsong Kebuli Biasa','Khadijah'],['kirim','11.00','Antar Tangerang','Hafiz'],['kirim','12.00','Antar Bogor','Khadijah']]},
+    {d:4,n:'Min',s:[['potong','05.30','Potong 2 · jantan','Ibrahim'],['potong','06.15','Potong 1 · betina','Naura'],['kirim','08.00','Berangkat ke Bandung','Ibrahim'],['kirim','11.00','Antar Jakarta Barat','Naura']]},
   ];
   $('#week').innerHTML=D.map(x=>`<div class="day ${x.today?'today':''}"><div class="day-h"><b>${x.d}</b><small>${x.n}${x.today?' · hari ini':''}</small></div>${x.s.map(s=>`<div class="slot ${s[0]}"><time>${s[1]}</time><b>${s[2]}</b><span class="muted">${s[3]}</span></div>`).join('')}</div>`).join('');
 }
 /* kandang */
 function renderKandang(){
-  const P=[{k:'A',j:2,b:2,lock:2},{k:'B',j:9,b:8,lock:5},{k:'C',j:12,b:10,lock:6},{k:'D',j:6,b:5,lock:4},{k:'Super',j:4,b:2,lock:1}];
-  $('#kandang').innerHTML=P.map(p=>{const t=TIPE.find(x=>x.k===p.k),tot=p.j+p.b,free=tot-p.lock;
-    return `<div class="pen"><div class="pen-h"><div><h4>Tipe ${p.k}</h4><span class="w">${t.w} · ${rp(t.harga)}</span></div>${free<=3?'<span class="low">Stok menipis</span>':`<span class="pill s-selesai">${free} siap</span>`}</div>
-    <div class="stock"><div><b class="num">${p.j}</b><small>Jantan</small></div><div><b class="num">${p.b}</b><small>Betina</small></div></div>
+  const P=[{k:'jantan',own:20,res:14,lock:12},{k:'betina',own:15,res:11,lock:5}];
+  $('#kandang').innerHTML=P.map(p=>{const t=TKM.find(x=>x.k===p.k),tot=p.own+p.res,free=tot-p.lock;
+    return `<div class="pen"><div class="pen-h"><div><h4>${t.n}</h4><span class="w">${rp(t.harga)} / ekor (contoh)</span></div>${free<=3?'<span class="low">Stok menipis</span>':`<span class="pill s-selesai">${free} siap</span>`}</div>
+    <div class="stock"><div><b class="num">${p.own}</b><small>Dapur Own</small></div><div><b class="num">${p.res}</b><small>Resourcing</small></div></div>
     <div><div class="meter" title="${p.lock} dikunci dari ${tot}"><i style="width:${p.lock/tot*100}%;background:var(--gold)"></i><i style="width:${free/tot*100}%;background:var(--brand)"></i></div>
     <div class="line" style="font-size:12.5px;margin-top:6px"><span>${p.lock} dikunci pesanan</span><span>${free} tersedia</span></div></div></div>`}).join('');
 }
@@ -953,7 +965,7 @@ function renderFin(){
     {l:'Biaya pakan & kandang',v:'Rp 18,4 jt',d:'+9% vs September',up:0},
   ].map(k=>`<div class="kpi"><span class="eyebrow">${k.l}</span><span class="v">${k.v}</span><span class="d ${k.up?'up':'down'}">${k.d}</span></div>`).join('');
   barChart($('#finChart'),['Mei','Jun','Jul','Agu','Sep','Okt*'],[{data:[312,356,341,389,402,238],color:'var(--brand)'},{data:[91,104,99,116,121,71],color:'var(--gold)'}],{max:450,ticks:[0,100,200,300,400],aria:'Omzet dan laba kotor bulanan Mei sampai Oktober 2026'});
-  const S=[['Paket Nasi Box',46,'var(--brand)'],['Paket Siap Saji',34,'var(--gold)'],['Potong Saja',12,'var(--info)'],['Tambahan (guling, box ekstra)',8,'var(--muted)']];
+  const S=[['Paket Kebuli Basmati',28,'var(--brand)'],['Paket Hemat',22,'var(--gold)'],['Paket Istimewa',17,'var(--info)'],['Paket lain (Ekonomis, Kebuli Biasa, Lux)',23,'var(--ok)'],['Masak Saja',10,'var(--muted)']];
   $('#split').innerHTML=S.map(s=>`<div class="split-row"><div class="line"><span>${s[0]}</span><span class="num">${s[1]}% · ${jt(238e6*s[1]/100)}</span></div><div class="meter"><i style="width:${s[1]}%;background:${s[2]}"></i></div></div>`).join('')+'<p class="muted" style="font-size:12.5px">*Oktober dihitung sampai 1 Okt 2026, termasuk pesanan yang sudah DP.</p>';
   $('#arBody').innerHTML=ORDERS.filter(o=>o.bayar<o.total&&o.bayar>0).map(o=>`<tr data-id="${o.id}"><td class="mono">${o.id}</td><td>${o.ortu}</td><td>${o.tgl}</td><td class="r num">${rp(o.bayar)}</td><td class="r num" style="color:var(--bad)">${rp(o.total-o.bayar)}</td><td><span class="pill s-dp">Tagih</span></td></tr>`).join('')||'<tr><td colspan="6" class="muted">Tidak ada piutang.</td></tr>';
 }
